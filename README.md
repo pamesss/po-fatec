@@ -8,6 +8,6 @@ O objetivo do projeto era estilizar com uso de CSS as páginas que foram produzi
 - [@pamesss](https://github.com/pamesss)
 - [@jkhlf](https://github.com/jkhlf)
 
-![printscreen](https://imgur.com/a/Hl8V0OJ)
+![printscreen](https://i.imgur.com/wtI8muO.png)
 [Link para o site](https://pamesss.github.io/po-fatec/)
 
