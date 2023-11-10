@@ -44,7 +44,6 @@
 .socialmedia_list {
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-between;
     gap: 10px;
 }
 .socialmedia_item img{
