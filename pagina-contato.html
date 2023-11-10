@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Orientado | Sistemas para Internet</title>
+    <link rel="shortcut icon" href="assets/icons/favicon.png" type="image/png"> 
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+    <div class="main_content">
+        <header class="border">
+            <h1 class="header_title">&#60;&#47;Projeto Orientado<span id="blinking_animation">&#95;</span>&#62;</h1>
+            <p>Um projeto desenvolvido por alunos do curso de Sistemas para Internet da <a href="https://fatecrl.edu.br/cursos/sistemas-para-internet/grades" target="_blank">FATEC</a>.</p>
+        </header>
+
+        <main>
+            <h2 class="main_title">Entre em contato!</h2>
+            <form class="form_contact" action="processar_formulario.php" method="post">
+                
+                <label class="contact_label" for="contact_username">Nome Completo: <span class="contact_required">*</span></label>
+                <input class="contact_input" type="text" name="contact_username" id="contact_username" placeholder="João Silva" required>
+
+                <label class="contact_label" for="contact_email">E-mail: <span class="contact_required">*</span></label>
+                <input class="contact_input" type="email" name="contact_email" id="contact_email" placeholder="exemplo@gmail.com" required>
+
+                <label class="contact_label" for="contact_phone">Telefone (opcional):</label>
+                <input class="contact_input" type="tel" name="contact_phone" id="contact_phone" placeholder="(13)12345-6789">
+
+                <label class="contact_label" for="contact_message">Mensagem: <span class="contact_required">*</span></label>
+                <textarea class="contact_input" name="contact_message" id="contact_message" cols="30" rows="3" required></textarea>
+
+                <div class="contact_input--layout">
+                    <section>
+                        <p class="contact_label form-radio_label">Como prefere nosso contato?</p>
+                        <label class="contact_input-label-checkbox" for="email-choice">
+                            <input class="form-radio" type="radio" name="contact-choice" id="email-choice">E-mail</label>
+    
+                        <label class="contact_input-label-checkbox" for="phone-choice">
+                            <input class="form-radio" type="radio" name="contact-choice" id="phone-choice">Telefone</label>
+    
+                        <label class="contact_input-label-checkbox" for="whatsapp-choice">
+                            <input class="form-radio" type="radio" name="contact-choice" id="whatsapp-choice">Whatsapp</label>
+                    </section>
+
+                    <section>
+                        <label class="contact_label form-dropdown_label" for="day-period">Em qual horário prefere ser atendido?</label>
+                        <select class="contact_input" name="day-period" id="day-period">
+                            <option class="form-dropdown" name="contact_timeperiod" value="" selected disabled>Selecione aqui</option>
+                            <option class="form-dropdown" name="contact_timeperiod" value="manhã">Manhã</option>
+                            <option class="form-dropdown" name="contact_timeperiod" value="tarde">Tarde</option>
+                            <option class="form-dropdown" name="contact_timeperiod" value="noite">Noite</option>
+                        </select>
+                    </section>
+                </div>
+
+                <input class="contact_submit" type="submit" value="Enviar formulário">
+
+                <p class="contact_direct">Ou entre em contato diretamente por <a href="mailto:bllopes69@example.com">e-mail</a>.</p>  <!-- quando clicado, abre o programa de e-mail padrão do usuário com o endereço "bllopes69@example.com" preenchido como destinatário. -->
+            </form>
+        </main>
+    </div>
+    <aside>
+        <nav>
+            <ul class="aside_menu">
+                <li class="menu_item--animation border">
+                    <a class="aside_menu_item " href="index.html">Home</a>
+                </li>
+                <li class="menu_item--animation border">
+                    <a class="aside_menu_item" href="pagina-khalaf.html">João Khalaf </a>
+                </li>
+                <li class="menu_item--animation border">
+                    <a class="aside_menu_item" href="pagina-pamella.html">Pamella Sotomayor</a>
+                </li>
+
+                <li class="border">
+                    <a class="aside_menu_item">Sites favoritos</a>
+                </li>
+                    <li class="menu_item--animation submenu_item">
+                        <a class="aside_menu_item" href="pagina-links-khalaf.html">Sites Favoritos (Khalaf)</a>
+                    </li>
+                    <li class="menu_item--animation submenu_item">
+                        <a class="aside_menu_item" href="pagina-links-pamella.html">Sites Favoritos (Pamella)</a>
+                    </li>
+
+                <li class="menu_item--animation border">
+                    <a class="aside_menu_item" href="pagina-tabela.html"> Tabelas de curiosidades</a>
+                </li>
+                <li class="menu_item--animation border">
+                    <a class="aside_menu_item aside_menu_item--active" href="pagina-contato.html">Contato</a>
+                </li> 
+            </ul>
+        </nav>
+    </aside>
+</body>
+</html>

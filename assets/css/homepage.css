@@ -1,0 +1,77 @@
+.home_opening-text { /*TEXTO*/
+    font-family: var(--fonte-corpo);
+    color: var(--cor-branco-50);
+    padding-bottom: 60px;
+}
+.home_container { display: flex; }
+.card_container {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 300px;
+    border-radius: 15px;
+    padding: 50px 20px 40px 20px;
+    margin: 0 30px;
+    box-shadow: 0px 10px 10px #00000080;
+}
+.card_container:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 30px var(--cor-principal-claro);
+}
+.card_photo {
+    height: 150px; width: 150px;
+    border-radius: 500px;
+    margin-bottom: 40px;
+    border: 5px solid var(--cor-principal-escuro);
+}
+.card_text-layout {
+    display: flex;
+    padding: 20px 0;
+}
+.card_container h3 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.4em;
+    font-weight: 400;
+}
+.card_container p {
+    font-family: var(--fonte-corpo);
+    color: var(--cor-branco-50);
+    font-size: 1em;
+    margin: 10px 10px 0 0 ;
+}
+.socialmedia_list {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+.socialmedia_item img{
+    width: 25px;
+    filter: invert(28%) sepia(17%) saturate(3042%) hue-rotate(263deg) brightness(93%) contrast(88%);
+}
+.socialmedia_item:hover { transform: scale(1.1); }
+.card_background { /*ADICIONA UM FUNDO NEUTRO AO CARD*/
+    z-index: -1;
+    position: absolute;
+    width: 1000px; height: 500px;
+    top: 100px;
+    background-color: var(--cor-principal-escuro);
+}
+.card_img { /*ADICIONA UM CABEÇALHO CUSTOMIZADO AO CARD*/
+    z-index: -2;
+    position: absolute;
+    top: 0;
+    width: 310px; height: 300px;
+}
+.img--khalaf { background-image: url(../imgs/img_khalaf-banner.png); }
+.img--pamella { background-image: url(../imgs/img_pamella-banner.png); }
+
+/*ANIMAÇÕES DOS CARD*/
+.card_animation-left:hover {
+    transform: scale(1.1) translate(-40px, -30px);
+}
+.card_animation-right:hover {
+transform: scale(1.1) translate(40px, -30px);
+}

@@ -1,0 +1,16 @@
+table {
+    border: 2px solid var(--cor-branco-50);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px 0;
+}
+
+th, td {
+    font-family: var(--fonte-titulo);
+    border-bottom: 2px solid #FFFFFF;
+    padding: 10px 40px;
+}
+th { font-size: 1.7em; }
+td { font-size: 1.2em; }
+.table_category { font-weight: 600; }
+tr:hover { background-color: #ffffff21; }

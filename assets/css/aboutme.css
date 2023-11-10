@@ -1,0 +1,43 @@
+.aboutme_intro-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.aboutme_intro-layout div { padding-top: 30px; }
+
+.aboutme_img {
+    width: 200px;
+    border-radius: 100%;
+    animation: floating-animation 6s ease-in-out infinite;
+}
+.aboutme_container p {
+    font-family: var(--fonte-corpo);
+    margin: 10px 0;
+}
+.btn-link {
+    width: fit-content;
+    margin-top: 30px;
+    padding: 20px 30px;
+    border-radius: 30px;
+    font-family: var(--fonte-corpo);
+    background-color: var(--cor-principal-escuro-50);
+}
+.btn-link:hover {
+    transform: translate(0, 5px) scale(0.98);
+    background-color: var(--cor-principal-claro);
+}
+/*ANIMAÇÃO PARA FOTO DO ALUNO FLUTUAR EM LOOP*/
+@keyframes floating-animation { 
+    0% {
+		box-shadow: 0 5px 15px 0px #00000099;
+		transform: translateY(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px #00000033;
+		transform: translateY(-10px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px #00000099;
+		transform: translateY(0px);
+	}
+}
