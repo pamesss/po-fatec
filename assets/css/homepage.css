@@ -1,7 +1,7 @@
-.home_opening-text { /*TEXTO*/
+.home_opening-text {
     font-family: var(--fonte-corpo);
     color: var(--cor-branco-50);
-    padding-bottom: 60px;
+    padding-bottom: 20px;
 }
 .home_container { display: flex; }
 .card_container {
@@ -46,19 +46,19 @@
     flex-flow: column wrap;
     gap: 10px;
 }
-.socialmedia_item img{
+.socialmedia_item img{ /*icones das redes sociais*/
     width: 25px;
     filter: invert(28%) sepia(17%) saturate(3042%) hue-rotate(263deg) brightness(93%) contrast(88%);
 }
 .socialmedia_item:hover { transform: scale(1.1); }
-.card_background { /*ADICIONA UM FUNDO NEUTRO AO CARD*/
+.card_background { /*div que adiciona um fundo a cada card*/
     z-index: -1;
     position: absolute;
     width: 1000px; height: 500px;
     top: 100px;
     background-color: var(--cor-principal-escuro);
 }
-.card_img { /*ADICIONA UM CABEÇALHO CUSTOMIZADO AO CARD*/
+.card_img { /*div que adiciona uma imagem customizada a cada card*/
     z-index: -2;
     position: absolute;
     top: 0;
@@ -67,7 +67,7 @@
 .img--khalaf { background-image: url(../imgs/img_khalaf-banner.png); }
 .img--pamella { background-image: url(../imgs/img_pamella-banner.png); }
 
-/*ANIMAÇÕES DOS CARD*/
+/*animações*/
 .card_animation-left:hover {
     transform: scale(1.1) translate(-40px, -30px);
 }

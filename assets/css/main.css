@@ -1,22 +1,22 @@
 /* LISTA DE PROPRIEDADES PESQUISADAS:
-    1) BORDA SÓLIDA COM GRADIENTE LINEAR (linear-gradient/border properties); 
-    2) FLEXBOX - CHEAT SHEET (para relembrar as propriedades flex);
-    3) ANIMAÇÃO EM CSS (animation property/@keyframes)
-    4) TRANSFORMAS ELEMENTOS DA PÁGINA (transform: scale rotate translate)
-    5) EDITAR CORES DE OBJETOS COM FILTRO (filter: https://codepen.io/sosuke/pen/Pjoqqp)
+    1) borda sólida com gradiente linear (linear-gradient/border properties); 
+    2) flexbox - cheat sheet (para relembrar as propriedades flex);
+    3) animações simples com css puro (animation property/@keyframes)
+    4) redimensionar e mover elementos na página (transform: scale rotate translate)
+    5) editar as cores dos SVG com filtro (filter: https://codepen.io/sosuke/pen/Pjoqqp)
 */
 
-/*IMPORTANDO O CONTEÚDO DAS PÁGINAS DE ESTILO EXTERNAS*/
+/*importa o conteúdo das páginas de estilo com componentes de cada página*/
 @import url(../css/homepage.css);
 @import url(../css/aboutme.css);
 @import url(../css/favoritelinks.css);
 @import url(../css/table.css);
 @import url(../css/contact.css);
 
-/*IMPORTANTO AS FONTES UTILIZADAS NO PROJETO*/
+/*fontes utilizadas no projeto retiradas do google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@300;400;500;600;700&display=swap');
 
-/*PALETA DE CORES E FONTES SALVA EM VARIÁVEIS*/
+/*variáveis da paleta de cores do projeto e fontes*/
 :root {
     --cor-principal: #362e56;
     --cor-principal-claro: #86377b;
@@ -30,7 +30,7 @@
     --fonte-corpo: 'Lato', sans-serif;
 }
 
-/*RESET CSS - REMOVE INCONSISTÊNCIAS POSSÍVEIS ENTRE DIFERENTES NAVEGADORES*/
+/*RESET CSS - remove inconsistências entre navegadores*/
 * {
     margin: 0; padding: 0;
     list-style-type: none;
@@ -41,22 +41,24 @@
     color: var(--cor-branco);
 }
 
-/*ESTRUTURA PADRÃO DE TODAS AS PÁGINAS*/
+/*estilização de todos os componentes que se repetem nas páginas do projeto*/
+
 body {
     display: flex;
     flex-direction: row-reverse;
     background: linear-gradient(180deg, rgba(39,39,60,1) 0%, rgba(54,46,86,1) 35%, rgba(89,50,102,1) 85%, rgba(134,55,123,1) 100%);
 }
 header { margin: 50px 0; padding-bottom: 10px; }
-header p { font-family: var(--fonte-corpo); }
-.header_title { /*H1*/
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-family: var(--fonte-titulo);
-    font-size: 2.6em;
-    font-weight: 400;
-}
-.main_content { /*DIV NECESSÁRIO PARA MANTER O MESMO LAYOUT DO CONTEÚDO NAS PÁGINAS*/
+    header p { font-family: var(--fonte-corpo); }
+    .header_title { /*H1*/
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        font-family: var(--fonte-titulo);
+        font-size: 2.6em;
+        font-weight: 400;
+    }
+    
+.main_content { /*div criado para manter o layout das tags header/main do menu lateral*/
     display: flex;
     flex-flow: column nowrap;
     margin: 0 auto;
@@ -74,7 +76,7 @@ main {
     font-family: var(--fonte-titulo);
     font-weight: 400;
 }
-.border { /*BORDA SÓLIDA COM GRADIENTE LINEAR*/
+.border { /*borda sólida com gradiente linear*/
     border-bottom: 2px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient(90deg, rgba(130,53,182,1) 39%, rgba(221,52,52,1) 100%);
@@ -85,8 +87,8 @@ main {
     letter-spacing: 2px;
 }
 
-/*MENU LATERAL*/
-aside { /*LAYOUT DO MENU LATERAL COM FLEXBOX*/
+/*menu lateral*/
+aside { /*layout do menu lateral com flex*/
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -98,7 +100,7 @@ aside { /*LAYOUT DO MENU LATERAL COM FLEXBOX*/
 }
 .aside_menu li { padding: 40px 0 10px; margin: 0 50px; }
 
-li .aside_menu_item { /*ESTILIZANDO OS ITEMS DO MENU*/
+li .aside_menu_item { /*itens do menu*/
     cursor: pointer;
     opacity: 25%;
     font-size: 1em;
@@ -107,25 +109,25 @@ li .aside_menu_item { /*ESTILIZANDO OS ITEMS DO MENU*/
     letter-spacing: 2px;
     text-transform: uppercase;
 }
-.submenu_item { /*USO DE !IMPORTANT PARA DESTACAR AS SUB-CATEGORIAS DO MENU*/
+.submenu_item { /*uso de !important para sobrepor o estilo e destacar que são sub-categorias*/
     font-size: 0.8em !important;
     padding: 20px 0 0 !important;
 }
 
-/*CLASSE PARA INDICAR A PÁGINA SELECIONADA*/
+/*classe para indicar qual página o usuário está*/
 .aside_menu_item--active { opacity: 100% !important; }
 
-/*PROPRIEDADES QUE ADICIONAM ANIMAÇÕES QUANDO PASSAR O MOUSE POR CIMA*/
+/*propriedades hover para adicionar interatividade*/
 li .aside_menu_item:hover { opacity: 100%; }   
 .menu_item--animation:hover { transform: scale(0.95);}
 
 
-/*ANIMAÇÕES PADRÃO DE TODAS AS PÁGINAS*/
-#blinking_animation { /*SUBLINHADO DO H1 PISCANDO*/
+/*animações*/
+#blinking_animation { /*sublinhado no h1*/
     animation: blink 1.5s ease-out infinite;
 } @keyframes blink { to { opacity: 0%; } }
 
-@keyframes slide-in { /*ANIMAÇÃO DO MENU LATERAL*/
-    0% { transform: translateX(-356px); }
+@keyframes slide-in { /*slide-in do menu lateral*/
+    0% { transform: translateX(-400px); }
     100% { transform: translateX(0px); }
 }

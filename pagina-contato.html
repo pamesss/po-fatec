@@ -25,34 +25,34 @@
                 <label class="contact_label" for="contact_email">E-mail: <span class="contact_required">*</span></label>
                 <input class="contact_input" type="email" name="contact_email" id="contact_email" placeholder="exemplo@gmail.com" required>
 
-                <label class="contact_label" for="contact_phone">Telefone (opcional):</label>
+                <label class="contact_label" for="contact_phone">Telefone &#40;opcional&#41;:</label>
                 <input class="contact_input" type="tel" name="contact_phone" id="contact_phone" placeholder="(13)12345-6789">
 
                 <label class="contact_label" for="contact_message">Mensagem: <span class="contact_required">*</span></label>
                 <textarea class="contact_input" name="contact_message" id="contact_message" cols="30" rows="3" required></textarea>
 
                 <div class="contact_input--layout">
-                    <section>
+                    <fieldset>
                         <p class="contact_label form-radio_label">Como prefere nosso contato?</p>
                         <label class="contact_input-label-checkbox" for="email-choice">
-                            <input class="form-radio" type="radio" name="contact-choice" id="email-choice">E-mail</label>
+                            <input class="form-radio" type="radio" name="contact-choice" id="email-choice" required>E-mail</label>
     
                         <label class="contact_input-label-checkbox" for="phone-choice">
-                            <input class="form-radio" type="radio" name="contact-choice" id="phone-choice">Telefone</label>
+                            <input class="form-radio" type="radio" name="contact-choice" id="phone-choice" required>Telefone</label>
     
                         <label class="contact_input-label-checkbox" for="whatsapp-choice">
-                            <input class="form-radio" type="radio" name="contact-choice" id="whatsapp-choice">Whatsapp</label>
-                    </section>
+                            <input class="form-radio" type="radio" name="contact-choice" id="whatsapp-choice" required>Whatsapp</label>
+                    </fieldset>
 
-                    <section>
+                    <fieldset>
                         <label class="contact_label form-dropdown_label" for="day-period">Em qual horário prefere ser atendido?</label>
-                        <select class="contact_input" name="day-period" id="day-period">
-                            <option class="form-dropdown" name="contact_timeperiod" value="" selected disabled>Selecione aqui</option>
-                            <option class="form-dropdown" name="contact_timeperiod" value="manhã">Manhã</option>
-                            <option class="form-dropdown" name="contact_timeperiod" value="tarde">Tarde</option>
-                            <option class="form-dropdown" name="contact_timeperiod" value="noite">Noite</option>
+                        <select class="contact_input" name="day-period" id="day-period" required>
+                            <option class="form-dropdown" value="" selected disabled>&#45;&#45;Selecione aqui&#45;&#45;</option>
+                            <option class="form-dropdown" value="manhã">Manhã</option>
+                            <option class="form-dropdown" value="tarde">Tarde</option>
+                            <option class="form-dropdown" value="noite">Noite</option>
                         </select>
-                    </section>
+                    </fieldset>
                 </div>
 
                 <input class="contact_submit" type="submit" value="Enviar formulário">

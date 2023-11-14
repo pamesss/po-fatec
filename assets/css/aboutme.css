@@ -8,7 +8,7 @@
 .aboutme_img {
     width: 200px;
     border-radius: 100%;
-    animation: floating-animation 6s ease-in-out infinite;
+    animation: floating-animation 6s ease-in-out infinite; /*declarando o nome da animação*/
 }
 .aboutme_container p {
     font-family: var(--fonte-corpo);
@@ -16,7 +16,6 @@
 }
 .btn-link {
     width: fit-content;
-    margin-top: 30px;
     padding: 20px 30px;
     border-radius: 30px;
     font-family: var(--fonte-corpo);
@@ -26,7 +25,28 @@
     transform: translate(0, 5px) scale(0.98);
     background-color: var(--cor-principal-claro);
 }
-/*ANIMAÇÃO PARA FOTO DO ALUNO FLUTUAR EM LOOP*/
+
+.aboutme_links-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin: 50px;
+}
+/*criada novas classes para as redes sociais da página individual porque dava conflito com a classe do mesmo nome*/
+.socialmedia_list--fix {
+    display: flex;
+    gap: 30px;
+}
+.socialmedia_item--fix img { 
+    width: 40px;
+    filter: invert(100%) sepia(0%) saturate(7489%) hue-rotate(62deg) brightness(111%) contrast(101%);
+}
+.socialmedia_item--fix img:hover {
+    filter:invert(29%) sepia(21%) saturate(2166%) hue-rotate(261deg) brightness(91%) contrast(90%);
+    transform: scale(0.95);
+}
+
+/*animação para a foto do aluno flutuar em loop*/
 @keyframes floating-animation { 
     0% {
 		box-shadow: 0 5px 15px 0px #00000099;
